@@ -13,17 +13,23 @@ Prerequisites
 
 ### Task 1: Create a toolchain
 
-1.	Open the creation page for the Simple Cloud Foundry toolchain by clicking the Create toolchain button.
 
 
-Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
+Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on IBM Cloud.
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/language-translator-nodejs)
 
-Tip: For instructions to navigate to the toolchain templates and select a toolchain to create, see Navigating to the toolchain templates.
+
+Tip: For instructions to navigate to the toolchain templates and select a toolchain to create, see [Navigating to the toolchain templates](https://www.ibm.com/cloud/garage/tutorials/toolchain_nav).
+
 2.	On the creation page, Change the toolchain to your name
+![Image1.png](1.png)
+
 3.	If you haven't authorized with GitHub, you are prompted to do so. Click Authorize and follow the instructions to link your IBM Cloud account to a GitHub account.
+
 4.	Review your GitHub settings and, if needed, change them. Each toolchain comes with a sample app, but you can select another repo to use.
+
+    ![Image2.png](0.png)
 
 •	To enable issue for ideas, enhancements, tasks, or bugs, select the Enable issues.
 
@@ -38,6 +44,7 @@ Note: If you do not see a route when you click the arrow on the View App button,
 
 1.	On the toolchain's Overview page, *click Eclipse Orion Web IDE*. Your GitHub repo is automatically loaded in your workspace. The name of the repo that is shown in the file navigator is the name that you specified for the sample GitHub Enterprise repo when you created the toolchain.
 2.	In the file navigator, expand the repo for your current toolchain and go to the index.ejs file in the Views folder.
+![Image3.png](3.png)
 
 3.	Edit the h1 text to change the text that is displayed by the app name. Your changes are automatically saved.image
 1. Edit the `index.ejs` file and change
@@ -49,6 +56,9 @@ to
 4. to push your changes you need to:
 
     - Go to the Eclipse Orion Web IDE menu, click the **Git icon**.
+
+    ![Image4.png](4.png)
+
     - In the Working Directory Changes section, type a commit message and make sure that the changed file is selected.
     - Click **Commit** to put the changes in the local master branch.
     - To push the changes to the origin/master branch, click Push. The origin/master branch is used by the pipeline, which automatically builds and deploys your changes.
@@ -57,11 +67,15 @@ to
 
 •  Verify that your changes are visible in the running app.
 
+   ![Image5.png](5.png)
 
 ### Task 3: Add a stage to the pipeline
 
 1.	Click on the toolchain's **Overview** page.
 2.	Click on the Delivery Pipeline tool integration to view the build and deployment activity for your app. The pipeline has two stages: one where your app is built and another where it is deployed.
+
+   ![Image6.png](5.5.png)
+
 
 The Build stage contains a build job that compiles your project in preparation for deployment. The Simple builder type packages your app, expecting the code to be in the root folder. If you use any other builder type, the build stage compiles your app, builds it, or both. This job generates artifacts that can be sent to a build archive directory. However, by default, the artifacts are placed in the project's root directory.
 
@@ -77,6 +91,9 @@ The Deploy stage contains a deploy job that deploys the artifacts created by the
 Image
 9.	Click save
 10.	Drag the stage that you just created so that it is between the first two stages.
+
+![Image7.png](6.png)
+
 11.	Run the stage
 
 
