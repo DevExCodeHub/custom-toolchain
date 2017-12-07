@@ -5,9 +5,11 @@ Prerequisites
 
 Prerequisites
 
-1.	*An IBM Cloud account* The account is free and provides access to everything you need to develop, track, plan, and deploy apps. [sign up] [https://console.bluemix.net/]  for a free account.
-2.	*A GitHub account* If you don't have one, [sign up][https://github.com/].
-3.	*Verify the toolchains and tool integrations* [https://console.bluemix.net/docs/services/ContinuousDelivery/cd_about.html#public_and_dedicated] that are available in your region and IBM Cloud environment. A toolchain is a set of tool integrations that support development, deployment, and operations tasks.
+1.	*An IBM Cloud account* The account is free and provides access to everything you need to develop, track, plan, and deploy apps. [sign up ](https://console.bluemix.net/).
+ for a free account.
+2.	*A GitHub account* If you don't have one,
+ [sign up](https://github.com/).
+3.	*Verify the* [toolchains and tool integrations](https://console.bluemix.net/docs/services/ContinuousDelivery/cd_about.html#public_and_dedicated) that are available in your region and IBM Cloud environment. A toolchain is a set of tool integrations that support development, deployment, and operations tasks.
 
 ## Getting started
 
@@ -44,7 +46,9 @@ Note: If you do not see a route when you click the arrow on the View App button,
 
 1.	On the toolchain's Overview page, *click Eclipse Orion Web IDE*. Your GitHub repo is automatically loaded in your workspace. The name of the repo that is shown in the file navigator is the name that you specified for the sample GitHub Enterprise repo when you created the toolchain.
 2.	In the file navigator, expand the repo for your current toolchain and go to the index.ejs file in the Views folder.
-![Image3.png](https://github.com/nailahDev/DevOps/blob/master/Images/2.png)
+
+![Image4.png](https://github.com/nailahDev/DevOps/blob/master/Images/3.png)
+
 
 3.	Edit the h1 text to change the text that is displayed by the app name. Your changes are automatically saved.image
 1. Edit the `index.ejs` file and change
@@ -57,7 +61,7 @@ to
 
     - Go to the Eclipse Orion Web IDE menu, click the **Git icon**.
 
-    ![Image4.png](https://github.com/nailahDev/DevOps/blob/master/Images/3.png)
+![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/4.png)
 
     - In the Working Directory Changes section, type a commit message and make sure that the changed file is selected.
     - Click **Commit** to put the changes in the local master branch.
@@ -67,7 +71,7 @@ to
 
 •  Verify that your changes are visible in the running app.
 
-   ![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/4.png)
+   ![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/5.png)
 
 ### Task 3: Add a stage to the pipeline
 
