@@ -23,33 +23,44 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
 
 Tip: For instructions to navigate to the toolchain templates and select a toolchain to create, see [Navigating to the toolchain templates](https://www.ibm.com/cloud/garage/tutorials/toolchain_nav).
 
-2.	On the creation page, Change the toolchain to your name
-![Image1.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
+2.	On the creation page, Change the toolchain to your Application name
+
+![Image2.png](https://github.com/nailahDev/DevOps/blob/master/Images/1.png)
 
 3.	If you haven't authorized with GitHub, you are prompted to do so. Click Authorize and follow the instructions to link your IBM Cloud account to a GitHub account.
+![Image1.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
 
 4.	Review your GitHub settings and, if needed, change them. Each toolchain comes with a sample app, but you can select another repo to use.
 
-    ![Image2.png](https://github.com/nailahDev/DevOps/blob/master/Images/1.png)
+
 
 •	To enable issue for ideas, enhancements, tasks, or bugs, select the Enable issues.
 
 •	To track the deployment of code changes by creating tags, labels, and comments on commits, pull requests, and referenced issues, select the Select Track deployment of code changes check box.
-5.	Click Deploy, You can see the deployed app by clicking View App.
 
-Note: If you do not see a route when you click the arrow on the View App button, either the pipeline is not finished deploying or an error occurred while your app was being deployed. in the Delivery Pipeline choose *Deploy stage* -*View logs and history*  to see the status of the deployment.
+5.	Click Deploy, You can see the deployed app by clicking View App.
+![Image1.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
+
+
+ Note: If you do not see a route when you click the arrow on the View App button, either the pipeline is not finished deploying or an error occurred while your app was being deployed. in the Delivery Pipeline choose *Deploy stage* -*View logs and history*  to see the status of the deployment.
+
+6. Return to the Toolchains page.
+The Toolchains page displays all the toolchains that are in your org. For each toolchain, you can see icons that represent the tool integrations that are in that toolchain. From this list, you can rename and delete toolchains.
+
+7. Click your new toolchain to open its Overview page.
+
 
 
 
 ### Task 2: Modify the code
 
-1.	On the toolchain's Overview page, *click Eclipse Orion Web IDE*. Your GitHub repo is automatically loaded in your workspace. The name of the repo that is shown in the file navigator is the name that you specified for the sample GitHub Enterprise repo when you created the toolchain.
+1.	On the toolchain's Overview page, *click Eclipse Orion Web IDE*. Your GitHub repo is automatically loaded in your workspace.
+
 2.	In the file navigator, expand the repo for your current toolchain and go to the index.ejs file in the Views folder.
 
 ![Image4.png](https://github.com/nailahDev/DevOps/blob/master/Images/3.png)
 
 
-3.	Edit the h1 text to change the text that is displayed by the app name. Your changes are automatically saved.image
 1. Edit the `index.ejs` file and change
 ```
 <h1>language translator</h1>
@@ -58,19 +69,20 @@ to
 ```
 4. to push your changes you need to:
 
-    - Go to the Eclipse Orion Web IDE menu, click the **Git icon**.
+• Go to the Eclipse Orion Web IDE menu, click the **Git icon**.
 
-![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/5.PNG)
+![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/4.png)
+- In the Working Directory Changes section, type a commit message and make sure that the changed file is selected.
 
-    - In the Working Directory Changes section, type a commit message and make sure that the changed file is selected.
-    - Click **Commit** to put the changes in the local master branch.
-    - To push the changes to the origin/master branch, click Push. The origin/master branch is used by the pipeline, which automatically builds and deploys your changes.
+• Click **Commit** to put the changes in the local master branch.
 
-•  When the pipeline process is completed, go to your toolchain's Overview page and click **View App**
+• To push the changes to the origin/master branch, click Push. The origin/master branch is used by the pipeline, which automatically builds and deploys your changes.
 
-•  Verify that your changes are visible in the running app.
+5. When the pipeline process is completed, go to your toolchain's Overview page and click **View App**
 
-   ![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/5.png)
+6. Verify that your changes are visible in the running app.
+
+   ![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/5.PNG)
 
 ### Task 2: Add a stage to the pipeline
 
@@ -80,18 +92,16 @@ to
    ![Image6.png](https://github.com/nailahDev/DevOps/blob/master/Images/5.5.png)
 
 
-The Build stage contains a build job that compiles your project in preparation for deployment. The Simple builder type packages your app, expecting the code to be in the root folder. If you use any other builder type, the build stage compiles your app, builds it, or both. This job generates artifacts that can be sent to a build archive directory. However, by default, the artifacts are placed in the project's root directory.
-
-The Deploy stage contains a deploy job that deploys the artifacts created by the Build stage. If a manifest file in the root folder exists, it is used to determine which buildpack to use. For more information about pipeline stages, see the IBM Cloud Docs.
+The Build stage contains a build job that compiles your project in preparation for deployment.
 
 3.	To add a third stage to deploy a test instance of your app, click **Add Stage**.
-4.	Click the stage name, MyStage, and change the name to **Deploy Stage - Test**.
+4.	Click the stage name, MyStage, and change the name to **Test**.
 5.	Click the **JOBS** tab.
 6.	Click **ADD JOB**, and then select the **Test** job type.
 8.	For this lab choose simple Test, you can select other types of tests such as Advanced Test or vulnerability advisor to test your containers health or any other test that fit your needs.
 
 7.	Review the values that are specified in the Organization and Space fields. Those values specify the org and space that the test instance of the app is deployed to. Make sure that a valid org and space are selected.
-Image
+
 9.	Click save
 10.	Drag the stage that you just created so that it is between the first two stages.
 
@@ -102,7 +112,8 @@ Image
 
 
 ### Task 3:IBM Cloud Availability Monitoring
-What's an app developer's worst nightmare? The app becomes unresponsive, so users become frustrated and move to a competitor. This scenario threatens even the top apps in the industry, such as Netflix and Uber. To ensure that your app is always available and satisfying users, teams must monitor its availability and response time with simulated tests.
+
+To ensure that your app is always available and satisfying users, teams must monitor its availability and response time with simulated tests.
 1. To add Availability Monitoring to a toolchain:
 - Click Add a Tool.
 - Click Availability Monitoring.
@@ -121,7 +132,10 @@ What's an app developer's worst nightmare? The app becomes unresponsive, so user
 
 ![Image9.png](https://github.com/nailahDev/DevOps/blob/master/Images/9.PNG)
 
-5.	On the card, click the menu and click ***Edit *** to view the test configuration.
+5.	On the card, click the menu and click *** Edit *** to view the test configuration.
+
+![Image8.png](https://github.com/nailahDev/DevOps/blob/master/Images/10.PNG)
+
 
 6.	View the information about the test, including its name and the URL that is used to test the site availability.
 
@@ -135,7 +149,7 @@ What's an app developer's worst nightmare? The app becomes unresponsive, so user
 1.	Open the detailed monitoring information for the application by clicking ***See Monitoring Details***
 
 
-To make sure that monitoring is working, you will stop the application and see that the availability monitor reflects that the application is not available. Then, you will restart the application and ensure that the monitor changes the status of the app.
+To make sure that monitoring is working, you will stop the application and see that the availability monitor reflects that the application is not available.
 1.	Go to the application's dashboard and click Overview.
 2.	Simulate an outage by stopping the app.
 3.	Click Monitoring to see the Availability Monitoring dashboard. The dashboard reflects that the application is not available.
@@ -149,7 +163,6 @@ To make sure that monitoring is working, you will stop the application and see t
 
 DevOps Insights is available through integration with IBM® Cloud Continuous Delivery toolchains. You can add DevOps Insights to any toolchain by selecting it from the tool integration catalog.
 
-DevOps Insights is also part of many toolchain templates. If you create a toolchain from a template that includes DevOps Insights, make sure that DevOps Insights is set to Advanced. Then, create the toolchain and skip to Using Insights.
 
 To add DevOps Insights to a toolchain:
 - Click Add a Tool.
@@ -162,7 +175,7 @@ Using DevOps Insights
 If your toolchain includes GitHub, GitLab, or JIRA, DevOps Insights automatically provides you with information about your codebase and team after some initial data gathering and analysis. If your toolchain does not include any of those integrations, add one of them and then follow these steps:
 
 1.  From your toolchain's Overview page, click DevOps Insights.
-2. Click Team Dynamics or Developer Insights and then choose a data category.
+2. Click Team Dynamics or Developer Insights and then choose any data category.
 
 ![Image8.png](https://github.com/nailahDev/DevOps/blob/master/Images/8.PNG)
 
@@ -174,6 +187,8 @@ If your toolchain includes GitHub, GitLab, or JIRA, DevOps Insights automaticall
 
 
 4.  After you explore Team Dynamics and Developer Insights, configure Deployment Risk to help you enforce code quality. Deployment Risk is compatible with both Delivery Pipeline for Continuous Delivery and Jenkins.
+To learn more about using DevOps Insights, see [IBM Cloud Docs](https://console.bluemix.net/docs/services/DevOpsInsights/about_risk.html#about-deployment-risk)
+ .
 
 ### Summary
 
