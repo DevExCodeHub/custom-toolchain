@@ -33,13 +33,12 @@ Tip: For instructions to navigate to the toolchain templates and select a toolch
 4.	Review your GitHub settings and, if needed, change them. Each toolchain comes with a sample app, but you can select another repo to use.
 
 
-
 •	To enable issue for ideas, enhancements, tasks, or bugs, select the Enable issues.
 
 •	To track the deployment of code changes by creating tags, labels, and comments on commits, pull requests, and referenced issues, select the Select Track deployment of code changes check box.
 
 5.	Click Deploy, You can see the deployed app by clicking View App.
-![Image1.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
+![Image1.png](https://github.com/nailahDev/DevOps/blob/master/Images/ViewApp.png)
 
 
  Note: If you do not see a route when you click the arrow on the View App button, either the pipeline is not finished deploying or an error occurred while your app was being deployed. in the Delivery Pipeline choose *Deploy stage* -*View logs and history*  to see the status of the deployment.
@@ -128,22 +127,23 @@ To ensure that your app is always available and satisfying users, teams must mon
 ![Image8.png](https://github.com/nailahDev/DevOps/blob/master/Images/10.PNG)
 
 
-4.	Click See Monitoring Details. On the Monitoring Details page, scroll to the Synthetic Tests section and look for the card that represents the default test that runs to check site availability for the URL.
+4.	Click See Monitoring Details. On the Monitoring Details page.
 
 ![Image9.png](https://github.com/nailahDev/DevOps/blob/master/Images/9.PNG)
 
-5.	On the card, click the menu and click *** Edit *** to view the test configuration.
+5. Scroll to the Synthetic Tests section and look for the card that represents the default test that runs to check site availability for the URL. On the card, click the menu and click Edit to view the test configuration.
 
-![Image8.png](https://github.com/nailahDev/DevOps/blob/master/Images/10.PNG)
+![Image9.png](https://github.com/nailahDev/DevOps/blob/master/Images/test-Edit.PNG)
 
 
 6.	View the information about the test, including its name and the URL that is used to test the site availability.
 
 7.	View the settings to customize how the test runs. You can change several configuration parameters, including the interval at which the test is run and the locations that it is run from.
+![Image10.png](https://github.com/nailahDev/DevOps/blob/master/Images/12.png)
+
 8.	Change the interval parameter to 1 minute so that you can quickly see when a failure occurs. Click Finish.
 
-
-![Image10.png](https://github.com/nailahDev/DevOps/blob/master/Images/12.png)
+![Image10.png](https://github.com/nailahDev/DevOps/blob/master/Images/interval.png)
 
 
 1.	Open the detailed monitoring information for the application by clicking ***See Monitoring Details***
@@ -188,7 +188,7 @@ If your toolchain includes GitHub, GitLab, or JIRA, DevOps Insights automaticall
 
 4.  After you explore Team Dynamics and Developer Insights, configure Deployment Risk to help you enforce code quality. Deployment Risk is compatible with both Delivery Pipeline for Continuous Delivery and Jenkins.
 To learn more about using DevOps Insights, see [IBM Cloud Docs](https://console.bluemix.net/docs/services/DevOpsInsights/about_risk.html#about-deployment-risk)
- .
+
 
 ### Summary
 
