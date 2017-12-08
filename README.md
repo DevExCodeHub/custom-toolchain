@@ -1,15 +1,14 @@
 # DevOps Lab
-In this tutorial, you create a toolchain from a template that contains a specific set of tool integrations and code to develop and deploy a sample Cloud Foundry app using Watson translation service that is written in Node.js. The toolchain is preconfigured for continuous delivery, source control, issue tracking, and online editing. After you create the toolchain, you change the app's code and push the change to the GitHub repository (repo). When you push changes to your repo, the delivery pipeline automatically builds and deploys the code that is in the repo.
-Prerequisites
+In this tutorial, you will create a toolchain from a template that contains a specific set of tool integrations and code to develop and deploy a sample Cloud Foundry app using Watson translation service that is written in Node.js. The toolchain is preconfigured for continuous delivery, source control, issue tracking, and online editing. After you create the toolchain, you change the app's code and push the change to the GitHub repository (repo). When you push changes to your repo, the delivery pipeline automatically builds and deploys the code that is in the repo.
 
 
-Prerequisites
+### Prerequisites
 
-1.	*An IBM Cloud account* The account is free and provides access to everything you need to develop, track, plan, and deploy apps. [sign up ](https://console.bluemix.net/).
+1.	An IBM Cloud account: The account is free and provides access to everything you need to develop, track, plan, and deploy apps. [sign up ](https://console.bluemix.net/).
  for a free account.
-2.	*A GitHub account* If you don't have one,
+2.	A GitHub account If you don't have one,
  [sign up](https://github.com/).
-3.	*Verify the* [toolchains and tool integrations](https://console.bluemix.net/docs/services/ContinuousDelivery/cd_about.html#public_and_dedicated) that are available in your region and IBM Cloud environment. A toolchain is a set of tool integrations that support development, deployment, and operations tasks.
+3.	Verify the [toolchains and tool integrations](https://console.bluemix.net/docs/services/ContinuousDelivery/cd_about.html#public_and_dedicated) that are available in your region and IBM Cloud environment. A toolchain is a set of tool integrations that support development, deployment, and operations tasks.
 
 ## Getting started
 
@@ -61,7 +60,7 @@ to
 
     - Go to the Eclipse Orion Web IDE menu, click the **Git icon**.
 
-![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/4.png)
+![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/5.PNG)
 
     - In the Working Directory Changes section, type a commit message and make sure that the changed file is selected.
     - Click **Commit** to put the changes in the local master branch.
@@ -73,7 +72,7 @@ to
 
    ![Image5.png](https://github.com/nailahDev/DevOps/blob/master/Images/5.png)
 
-### Task 3: Add a stage to the pipeline
+### Task 2: Add a stage to the pipeline
 
 1.	Click on the toolchain's **Overview** page.
 2.	Click on the Delivery Pipeline tool integration to view the build and deployment activity for your app. The pipeline has two stages: one where your app is built and another where it is deployed.
@@ -102,7 +101,7 @@ Image
 
 
 
-### Task3: Adding DevOps Insights to a Toolchain
+### Task 3: Adding DevOps Insights to a Toolchain
 
 DevOps Insights is available through integration with IBM® Cloud Continuous Delivery toolchains. You can add DevOps Insights to any toolchain by selecting it from the tool integration catalog.
 
@@ -120,6 +119,47 @@ If your toolchain includes GitHub, GitLab, or JIRA, DevOps Insights automaticall
 
 1.  From your toolchain's Overview page, click DevOps Insights.
 2. Click Team Dynamics or Developer Insights and then choose a data category.
+![Image7.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
+
 3. Explore your project's data by viewing the dashboards in the data category. If you want to know more about a graph or what you might do with its information, click Information or Guidance.
+![Image8.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
+
 
 4. After you explore Team Dynamics and Developer Insights, configure Deployment Risk to help you enforce code quality. Deployment Risk is compatible with both Delivery Pipeline for Continuous Delivery and Jenkins.
+
+### Task 4:IBM Cloud Availability Monitoring
+What's an app developer's worst nightmare? The app becomes unresponsive, so users become frustrated and move to a competitor. This scenario threatens even the top apps in the industry, such as Netflix and Uber. To ensure that your app is always available and satisfying users, teams must monitor its availability and response time with simulated tests.
+1. To add Availability Monitoring to a toolchain:
+- Click Add a Tool.
+- Click Availability Monitoring.
+- Click Create Integration.
+
+
+1.	Go to the IBM Cloud Apps dashboard. Click the application to monitor. By default, the application's Overview page opens.
+
+2.	Click ***Monitoring***.
+3.	View the monitoring information.
+4.	Click See Monitoring Details. On the Monitoring Details page, scroll to the Synthetic Tests section and look for the card that represents the default test that runs to check site availability for the URL.
+
+5.	On the card, click the menu and click ***Edit *** to view the test configuration.
+
+6.	View the information about the test, including its name and the URL that is used to test the site availability.
+
+7.	View the settings to customize how the test runs. You can change several configuration parameters, including the interval at which the test is run and the locations that it is run from.
+8.	Change the interval parameter to 1 minute so that you can quickly see when a failure occurs. Click Finish.
+
+
+
+1.	Open the detailed monitoring information for the application by clicking ***See Monitoring Details***
+
+
+To make sure that monitoring is working, you will stop the application and see that the availability monitor reflects that the application is not available. Then, you will restart the application and ensure that the monitor changes the status of the app.
+1.	Go to the application's dashboard and click Overview.
+2.	Simulate an outage by stopping the app.
+3.	Click Monitoring to see the Availability Monitoring dashboard. The dashboard reflects that the application is not available.
+4.	Return to the Monitoring page, and restart the app.
+
+
+### Summary
+
+You learned how to add IBM Delivery Pipeline works,  Cloud Availability Monitoring to your toolchain so that you can monitor your app. You also learned about the application availability monitoring that is provided by default.
