@@ -28,16 +28,16 @@ Tip: For instructions to navigate to the toolchain templates and select a toolch
 ![Image2.png](https://github.com/nailahDev/DevOps/blob/master/Images/1.png)
 
 3.	If you haven't authorized with GitHub, you are prompted to do so. Click Authorize and follow the instructions to link your IBM Cloud account to a GitHub account.
-![Image1.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
 
 4.	Review your GitHub settings and, if needed, change them. Each toolchain comes with a sample app, but you can select another repo to use.
-
+![Image1.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
 
 •	To enable issue for ideas, enhancements, tasks, or bugs, select the Enable issues.
 
 •	To track the deployment of code changes by creating tags, labels, and comments on commits, pull requests, and referenced issues, select the Select Track deployment of code changes check box.
 
 5.	Click Deploy, You can see the deployed app by clicking View App.
+
 ![Image1.png](https://github.com/nailahDev/DevOps/blob/master/Images/ViewApp.png)
 
 
