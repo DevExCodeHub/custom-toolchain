@@ -119,10 +119,13 @@ If your toolchain includes GitHub, GitLab, or JIRA, DevOps Insights automaticall
 
 1.  From your toolchain's Overview page, click DevOps Insights.
 2. Click Team Dynamics or Developer Insights and then choose a data category.
-![Image7.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
+![Image8.png](https://github.com/nailahDev/DevOps/blob/master/Images/8.PNG)
+
 
 3. Explore your project's data by viewing the dashboards in the data category. If you want to know more about a graph or what you might do with its information, click Information or Guidance.
-![Image8.png](https://github.com/nailahDev/DevOps/blob/master/Images/0.png)
+![Image7.png](https://github.com/nailahDev/DevOps/blob/master/Images/7.PNG)
+
+
 
 
 4. After you explore Team Dynamics and Developer Insights, configure Deployment Risk to help you enforce code quality. Deployment Risk is compatible with both Delivery Pipeline for Continuous Delivery and Jenkins.
