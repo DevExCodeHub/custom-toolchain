@@ -4,7 +4,8 @@ In this tutorial, you will create a toolchain from a template that contains a sp
 
 ### Prerequisites
 
-1.	An IBM Cloud account: The account is free and provides access to everything you need to develop, track, plan, and deploy apps. [sign up ](https://console.bluemix.net/).
+1.	An IBM Cloud account: The account is free and provides access to everything you need to develop, track, plan, and deploy apps. [sign up ](http://ibm.biz/aprodcode
+).
  for a free account.
 2.	A GitHub account If you don't have one,
  [sign up](https://github.com/).
