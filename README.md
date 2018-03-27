@@ -202,7 +202,7 @@ Thanks goes to these wonderful people:
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
  | [<img src="https://avatars3.githubusercontent.com/u/31738704?s=400&v=4" width="100px;"/><br /><sub><b>Nailah ALTayyar</b></sub>](https://twitter.com/naila_musaid)<br />[📖](#Contributors "Documentation")
-| :---: | :---: |
+| :---: | 
 
 This project follows the [all-contributors][all-contributors] specification.
 Contributions of any kind are welcome!
