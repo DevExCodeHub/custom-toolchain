@@ -194,3 +194,21 @@ To learn more about using DevOps Insights, see [IBM Cloud Docs](https://console.
 ### Summary
 
 In this tutorial you learned the IBM Garage Method and created a toolchain that includes a sample application, a Git repository, Eclipse Orin Web (IDE), and a delivery pipeline. Then, you  delivered a cognitive application to production on IBM Cloud. You also learned about the application availability monitoring & DevOps Insights that is provided by IBM Cloud.
+
+## Contributors
+
+Thanks goes to these wonderful people:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+ | [<img src="https://avatars3.githubusercontent.com/u/31738704?s=400&v=4" width="100px;"/><br /><sub><b>Nailah ALTayyar</b></sub>](https://twitter.com/naila_musaid)<br />[📖](#Contributors "Documentation")
+| :---: | :---: |
+
+This project follows the [all-contributors][all-contributors] specification.
+Contributions of any kind are welcome!
+
+[all-contributors]: https://github.com/kentcdodds/all-contributors
+
+## Acknowledgement
+
+The **Language Translator Demo** is orginily created by IBM [IBM Demo](https://github.com/watson-developer-cloud/language-translator-nodejs)
